@@ -1,23 +1,23 @@
 //your JS code here. If required.
-let userForm = document.getElementById('userForm');
-let submit = document.getElementById('submit');
+const userForm = document.getElementById("userForm");
+const submit = document.getElementById("btn");
 
-submit.addEventListener("click", (e)=>{
+submit.addEventListener("click", (event)=>{
 	event.preventDefault();
 
-	const name = document.getElementById('name').value;
-	const age = document.getElementById('age').value;
+	const name = document.getElementById("name").value;
+	const age = document.getElementById("age").value;
 
 	if(name === '' || age === '') {
 		alert('please fill in both fields.');
 		return;
 	}	
 
-const ageNum = pareInt(age);
+
 
 const ageCheck = new Promise((res, rej)=>{
 	setTimeout(()=>{
-		if(ageNum > 18) {
+		if(age > 18) {
 			res();
 		}else{
 			rej();

@@ -9,7 +9,7 @@ submit.addEventListener("click", (event)=>{
 	const age = document.getElementById("age").value;
 
 	if(name === '' || age === '') {
-		alert('please fill in both fields.');
+		alert('Please enter valid details');
 		return;
 	}	
 
